@@ -1,0 +1,145 @@
+/* Base */
+body {
+  background: linear-gradient(180deg, #fff5f8 0%, #ffe6eb 100%);
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  color: #5a4a4a;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 650px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Hero */
+.hero {
+  padding: 60px 20px 30px;
+}
+
+h1 {
+  color: #e68ca5;
+  font-size: 2.3em;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.6em;
+}
+
+/* Photo */
+.photo img {
+  width: 90%;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin: 25px 0;
+}
+
+/* Spotify */
+.spotify h2 {
+  margin-top: 40px;
+  color: #e68ca5;
+  font-size: 1.5em;
+}
+
+/* Button */
+button {
+  background-color: #ffb6c1;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 1.1em;
+  cursor: pointer;
+  color: #5a4a4a;
+  margin-top: 20px;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #ffa7b8;
+}
+
+/* Popup */
+#surprisePopup {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(255, 240, 245, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  padding: 20px;
+}
+
+.popup-content {
+  background: #fff0f5;
+  border-radius: 20px;
+  padding: 30px 25px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 420px;
+  animation: fadeInUp 0.8s ease;
+}
+
+.popup-content h3 {
+  color: #e68ca5;
+  margin-bottom: 10px;
+  font-size: 1.4em;
+}
+
+.popup-content p {
+  font-size: 1em;
+  line-height: 1.6em;
+}
+
+@keyframes fadeInUp {
+  from {opacity: 0; transform: translateY(30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.hidden {
+  display: none;
+}
+
+/* Canvas Layers */
+canvas#confetti,
+canvas#hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* 🌸 Mobile Responsiveness */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .photo img {
+    width: 100%;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  button {
+    padding: 10px 24px;
+    font-size: 1em;
+  }
+
+  .popup-content {
+    width: 90%;
+    padding: 25px 20px;
+  }
+
+  .popup-content p {
+    font-size: 0.95em;
+  }
+}
